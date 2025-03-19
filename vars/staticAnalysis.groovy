@@ -5,7 +5,7 @@ def call(Map config){
      }
 
     timeout(time: 1, unit: 'HOURS') {
-                    waitForQualityGate abortPipeline: ${config.abortPipeline}
+                    waitForQualityGate abortPipeline: ${config.abortPipeline} as Boolean
     }
             				
 }
